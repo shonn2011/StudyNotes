@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML标签</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <style>
+        ol {
+            counter-reset: node;
+            list-style-type: none;
+        }
+
+            ol li {
+                counter-increment: node;
+            }
+
+                ol li:before {
+                    content: counters(node, ".") "、";
+                }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>
+            <span>一级节点（1）</span>
+            <ol>
+                <li>
+                    <span>二级节点(1.1)</span>
+                    <ol>
+                        <li>
+                            <span>三级节点（1.1.1）</span>
+                        </li>
+                        <li>
+                            <span>三级节点（1.1.2）</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <span>二级节点(1.2)</span>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <span>一级节点（2）</span>
+            <ol>
+                <li>
+                    <span>二级节点(2.1)</span>
+                    <ol>
+                        <li>
+                            <span>三级节点（2.1.1）</span>
+                        </li>
+                        <li>
+                            <span>三级节点（2.1.2）</span>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <span>二级节点(2.2)</span>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <span>一级节点（3）</span>
+        </li>
+        <li>
+            <span>一级节点（4）</span>
+        </li>
+    </ol>
+</body>
+</html>
